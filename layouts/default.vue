@@ -5,7 +5,6 @@
   </div>
 </template>
 <script>
-import params from "@/config/params.js";
 import Header from "@/components/layout/header";
 export default {
   components: {
@@ -18,7 +17,7 @@ export default {
   },
   async fetch() {
     this.pageData = await this.$axios
-      .get(params.baseUrl + "/payload/shared.json")
+      .get("/payload/shared.json")
       .then((response) => {
         return response.data;
       });

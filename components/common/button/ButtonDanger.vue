@@ -1,16 +1,11 @@
 <template>
-  <nuxt-link :to="buttonData.path">
-    <b-button class="btn-danger">{{ buttonData.text }}</b-button>
+  <nuxt-link :to="prop.path">
+    <b-button class="btn-danger" :class="prop.addBtnClass"> {{ prop.text }} </b-button>
   </nuxt-link>
 </template>
 <script>
 export default {
-  props: ["prop"],
-  data() {
-    return {
-      buttonData: this.prop
-    };
-  }
+  props: ["prop"]
 };
 </script>
 <style scoped>

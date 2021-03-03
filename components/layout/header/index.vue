@@ -3,29 +3,21 @@
     <div class="bv-example-row position-absolute header">
       <b-row class="m-0">
         <b-col sm="3">
-          <b-img style="margin-top: 6px" :src="pageData.image.url"> </b-img>
+          <b-img style="margin-top: 6px" :src="prop.image.url"> </b-img>
         </b-col>
-        <b-col
-          sm="9"
-          align-v="center"
-          class="d-flex justify-content-end align-self-center"
-        >
+        <b-col sm="9" align-v="center" class="d-flex justify-content-end align-self-center">
           <b-list-group horizontal>
-            <nuxt-link
-              to="#"
-              class="links hover-text-decoration-none d-flex align-self-center"
-              v-for="(item, index) in pageData.image.page_links"
-              :key="index"
-            >
-              <b-list-group-item
-                class="bg-transparent border-0 text-uppercase title"
-              >
+            <nuxt-link class="links hover-text-decoration-none d-flex align-self-center" v-for="(item, index) in prop.image.page_links" :key="index" to="#">
+              <b-list-group-item class="bg-transparent border-0 text-uppercase title">
                 {{ item.title }}
               </b-list-group-item>
             </nuxt-link>
             <b-list-group-item class="bg-transparent border-0">
               <ButtonDanger
-                :prop="{ text: pageData.image.button, path: '#' }"
+                :prop="{
+                  text: prop.image.button,
+                  path: '#'
+                }"
               />
             </b-list-group-item>
           </b-list-group>
@@ -38,12 +30,7 @@
 import ButtonDanger from "@/components/common/button/ButtonDanger";
 export default {
   props: ["prop"],
-  components: { ButtonDanger },
-  data() {
-    return {
-      pageData: this.prop
-    };
-  }
+  components: { ButtonDanger }
 };
 </script>
 <style scoped>
