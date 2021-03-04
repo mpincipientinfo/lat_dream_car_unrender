@@ -22,7 +22,7 @@ export default {
   background: linear-gradient(90deg, #e50612, #730309) !important;
   color: #fff !important;
   text-align: center !important;
-  padding: 14px 12px 6px 12px;
+  padding: 12px;
   border: 0;
   overflow: hidden;
   position: relative;
