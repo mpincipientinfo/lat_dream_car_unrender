@@ -1,26 +1,51 @@
 <template>
   <div>
     <VueSlickCarousel v-bind="carouselSettings">
-      <div>1</div>
-      <div>2</div>
-      <div>3</div>
-      <div>4</div>
-      <div>4</div>
-      <div>4</div>
-      <div>4</div>
-      <div>4</div>
+      <div v-for="(credential, index) in prop" :key="index">
+        <Credential :prop="credential" />
+      </div>
     </VueSlickCarousel>
   </div>
 </template>
 <script>
+import Credential from "./Credential";
 export default {
   props: ["prop"],
+  components: {
+    Credential
+  },
   data() {
     return {
       carouselSettings: {
         slidesToShow: 3,
         infinite: false,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 3,
+              infinite: true,
+              dots: true
+            }
+          },
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2,
+              initialSlide: 2
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
       }
     };
   }
