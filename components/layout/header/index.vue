@@ -7,7 +7,12 @@
         </b-col>
         <b-col sm="9" align-v="center" class="d-flex justify-content-end align-self-center">
           <b-list-group horizontal>
-            <nuxt-link class="links hover-text-decoration-none d-flex align-self-center" v-for="(item, index) in prop.image.page_links" :key="index" to="#">
+            <nuxt-link
+              class="links hover-text-decoration-none d-flex align-self-center"
+              v-for="(item, index) in prop.image.page_links"
+              :key="index"
+              to="#"
+            >
               <b-list-group-item class="bg-transparent border-0 text-uppercase title">
                 {{ item.title }}
               </b-list-group-item>
