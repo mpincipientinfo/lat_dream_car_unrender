@@ -4,11 +4,16 @@
       <h1 class="title">{{ prop.title }}</h1>
       <p class="subtitle my-55 pb-4 pt-3 mt-2 mb-3">{{ prop.subtitle }}</p>
     </div>
+    <Carousel />
   </b-container>
 </template>
 <script>
+import Carousel from "./Carousel";
 export default {
-  props: ["prop"]
+  props: ["prop"],
+  components: {
+    Carousel
+  }
 };
 </script>
 <style scoped>

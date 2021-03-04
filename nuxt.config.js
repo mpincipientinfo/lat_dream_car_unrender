@@ -1,4 +1,7 @@
 export default {
+  server:{
+    host:0
+  },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'dream_car_unrender',
@@ -17,12 +20,13 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
-    "@/assets/css/custom.css"
+    "@/assets/css/custom.css",
+    "vue-slick-carousel/dist/vue-slick-carousel-theme.css",
+    "vue-slick-carousel/dist/vue-slick-carousel.css"
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [
-  ],
+  plugins: ["@/plugins/carousel.js"],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
