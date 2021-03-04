@@ -13,11 +13,11 @@
   </div>
 </template>
 <script>
-import ButtonDangerExpand from "@/components/common/button/ButtonDangerExpand";
+import button from "@/components/common/button";
 export default {
   props: ["prop"],
   components: {
-    ButtonDangerExpand
+    ButtonDangerExpand: button.ButtonDangerExpand
   }
 };
 </script>

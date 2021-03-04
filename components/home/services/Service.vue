@@ -35,10 +35,10 @@
   </b-row>
 </template>
 <script>
-import ButtonDangerExpand from "@/components/common/button/ButtonDangerExpand";
+import button from "@/components/common/button";
 export default {
   props: ["count", "prop"],
-  components: { ButtonDangerExpand }
+  components: { ButtonDangerExpand: button.ButtonDangerExpand }
 };
 </script>
 <style scoped>

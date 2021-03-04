@@ -32,10 +32,10 @@
   </div>
 </template>
 <script>
-import ButtonDanger from "@/components/common/button/ButtonDanger";
+import button from "@/components/common/button";
 export default {
   props: ["prop"],
-  components: { ButtonDanger }
+  components: { ButtonDanger: button.ButtonDanger }
 };
 </script>
 <style scoped>

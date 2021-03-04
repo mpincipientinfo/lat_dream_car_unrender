@@ -8,13 +8,15 @@
   </div>
 </template>
 <script>
-import Head from "@/components/home/head";
-import Credentials from "@/components/home/credentials";
-import Benefits from "@/components/home/benefits";
-import Services from "@/components/home/services";
-import Contact from "@/components/home/contact";
+import home from "@/components/home";
 export default {
-  components: { Head, Credentials, Benefits, Services, Contact },
+  components: {
+    Head: home.Head,
+    Credentials: home.Credentials,
+    Benefits: home.Benefits,
+    Services: home.Services,
+    Contact: home.Contact
+  },
   async asyncData({ $axios }) {
     let pageData = await $axios.get("/payload/home.json").then((response) => {
       return response.data;

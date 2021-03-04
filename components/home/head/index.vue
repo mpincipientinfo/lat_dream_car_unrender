@@ -24,13 +24,12 @@
   </div>
 </template>
 <script>
-import ButtonDanger from "@/components/common/button/ButtonDanger";
-import ButtonInfoDark from "@/components/common/button/ButtonInfoDark";
+import button from "@/components/common/button/index.js";
 export default {
   props: ["prop"],
   components: {
-    ButtonDanger,
-    ButtonInfoDark
+    ButtonDanger: button.ButtonDanger,
+    ButtonInfoDark: button.ButtonInfoDark
   }
 };
 </script>
