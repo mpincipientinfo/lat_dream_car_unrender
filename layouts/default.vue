@@ -1,8 +1,8 @@
 <template>
   <div>
-    <Header class="section" id="header" :prop="pageData.section_navbar" />
+    <Header :prop="pageData.section_navbar" />
     <Nuxt />
-    <Footer class="section" id="footer" :prop="pageData.section_footer" />
+    <Footer :prop="pageData.section_footer" />
   </div>
 </template>
 <script>
